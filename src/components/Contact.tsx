@@ -50,9 +50,9 @@ const Contact: React.FC = () => {
     if (validateForm()) {
       setIsSending(true);
       // Replace with your EmailJS Service ID, Template ID, and User ID
-      const serviceId = 'YOUR_SERVICE_ID'; // e.g., 'service_abc123'
-      const templateId = 'YOUR_TEMPLATE_ID'; // e.g., 'template_xyz789'
-      const userId = 'YOUR_USER_ID'; // e.g., 'user_123456789'
+      const serviceId = 'service_193axns'; // e.g., 'service_abc123'
+      const templateId = 'template_zli1bzc'; // e.g., 'template_xyz789'
+      const userId = 'JDCvyBO5wuJWTDUe8'; // e.g., 'user_123456789'
 
       emailjs.send(serviceId, templateId, {
         name: formData.name,
