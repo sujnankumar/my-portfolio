@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 1,
     title: "E-commerce Sentiment Analysis API",
     description: "SaaS-style backend that analyzes e-commerce product reviews using sentiment analysis; built with Node.js, TypeScript, and MySQL.",
-    image: "https://www.carierista.com/storage/company-posts/23/e86715607d99e6fb765e4cd26bb859ce.jpg",
+    image: "/sentiment-analysis.png",
     techStack: ["Node.js", "TypeScript", "MySQL"],
     demoUrl: "",
     githubUrl: "https://github.com/sujnankumar/ecommerce-sentiment-analysis"
