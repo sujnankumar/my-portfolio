@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { ContactForm } from '../types';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const { ref: sectionRef, isVisible } = useScrollAnimation(0.2);
@@ -12,6 +13,7 @@ const Contact: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<ContactForm>>({});
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -44,13 +46,30 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
-      // Simulate form submission
-      setTimeout(() => {
-        setIsSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
-      }, 500);
+      setIsSending(true);
+      // Replace with your EmailJS Service ID, Template ID, and User ID
+      const serviceId = 'YOUR_SERVICE_ID'; // e.g., 'service_abc123'
+      const templateId = 'YOUR_TEMPLATE_ID'; // e.g., 'template_xyz789'
+      const userId = 'YOUR_USER_ID'; // e.g., 'user_123456789'
+
+      emailjs.send(serviceId, templateId, {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      }, userId)
+        .then(() => {
+          setIsSubmitted(true);
+          setFormData({ name: '', email: '', message: '' });
+        })
+        .catch((error) => {
+          console.error('EmailJS error:', error);
+          setErrors({ message: 'Failed to send message. Please try again later.' });
+        })
+        .finally(() => {
+          setIsSending(false);
+        });
     }
   };
 
@@ -140,7 +159,7 @@ const Contact: React.FC = () => {
             <div className="map-container bg-gray-200 dark:bg-gray-700 rounded-lg h-64 flex items-center justify-center overflow-hidden">
               <img
                 src="https://images.pexels.com/photos/2173872/pexels-photo-2173872.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="San Francisco Map"
+                alt="Map"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
@@ -225,10 +244,13 @@ const Contact: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-accent hover:bg-accent/90 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    disabled={isSending}
+                    className={`w-full bg-accent hover:bg-accent/90 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                      isSending ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
                   >
                     <Send size={20} />
-                    Send Message
+                    {isSending ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}
