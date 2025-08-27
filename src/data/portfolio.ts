@@ -41,7 +41,7 @@ export const projects: Project[] = [
     id: 5,
     title: "Restobot - Restaurant Chatbot",
     description: "AI-powered restaurant assistant with menu exploration, personalized dish recommendations, cart, and dashboard. Flask backend with React/Tailwind frontend.",
-    image: "https://private-user-images.githubusercontent.com/63709163/407488102-b4371afb-2b9b-4cbf-892b-91016a24e3b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTYyNzU0ODksIm5iZiI6MTc1NjI3NTE4OSwicGF0aCI6Ii82MzcwOTE2My80MDc0ODgxMDItYjQzNzFhZmItMmI5Yi00Y2JmLTg5MmItOTEwMTZhMjRlM2IxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODI3VDA2MTMwOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc1Nzg5MjRlZDYxZGJhYmIyYTI0N2Y3YWQyNjIzZTFhOWYxNTJkMjdiNDBjOGI4YzhiZmRmYjI4ZmY4YTYyMGEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.rbcm25lLheX8X7WkGQUvX6Qot0PpKkQY1ExivrCrIoM",
+    image: "https://blog.slantco.com/wp-content/uploads/2023/08/ai-in-restaurants-1024x682.jpeg",
     techStack: ["Flask", "Flask-SQLAlchemy", "React", "Tailwind CSS"],
     demoUrl: "",
     githubUrl: "https://github.com/sujnankumar/restobot-restaurant-chatbot"
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     id: 8,
     title: "Job Portal Backend",
     description: "Backend services for a job portal.",
-    image: "https://raw.githubusercontent.com/github/explore/main/topics/python/python.png",
+    image: "/job-portal.png",
     techStack: ["Python"],
     demoUrl: "https://job-portal-frontend-bice-gamma.vercel.app/",
     githubUrl: "https://github.com/sujnankumar/job-portal-backend"
