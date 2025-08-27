@@ -19,6 +19,10 @@ const Hero: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const scrollToProject = () => {
+    const projectSection = document.querySelector('#projects');
+    projectSection?.scrollIntoView({ behavior: 'smooth' });
+  };
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
     aboutSection?.scrollIntoView({ behavior: 'smooth' });
@@ -44,7 +48,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+  <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           {/* Profile Photo */}
           <div className="hero-image-container">
@@ -71,7 +75,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={scrollToAbout}
+                onClick={scrollToProject}
                 className="bg-primary hover:bg-primary/90 dark:bg-accent dark:hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 View My Work
@@ -87,15 +91,18 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Scroll Down Arrow */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <button
-            onClick={scrollToAbout}
-            className="scroll-arrow animate-bounce text-gray-800 dark:text-white hover:text-primary dark:hover:text-accent transition-colors duration-300 p-2 rounded-full bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30"
-          >
-            <ChevronDown size={32} />
-          </button>
-        </div>
+      </div>
+
+      {/* Scroll Down Arrow (positioned relative to section) */}
+      <div className="absolute left-1/2 top-[75%] transform -translate-x-1/2">
+        <button
+          onClick={scrollToAbout}
+          className="scroll-arrow animate-bounce text-gray-800 dark:text-white hover:text-primary dark:hover:text-accent transition-colors duration-300 p-2 rounded-full bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30"
+          aria-label="Scroll to About section"
+          title="Scroll"
+        >
+          <ChevronDown size={32} />
+        </button>
       </div>
     </section>
   );

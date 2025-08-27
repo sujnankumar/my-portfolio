@@ -83,12 +83,16 @@ const Certifications: React.FC = () => {
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110"
+            aria-label="Previous certification"
+            title="Previous"
           >
             <ChevronLeft size={24} className="text-gray-600 dark:text-gray-400" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110"
+            aria-label="Next certification"
+            title="Next"
           >
             <ChevronRight size={24} className="text-gray-600 dark:text-gray-400" />
           </button>
@@ -104,36 +108,44 @@ const Certifications: React.FC = () => {
                     ? 'bg-accent scale-125' 
                     : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                 }`}
+                aria-label={`Go to slide ${index + 1}`}
+                title={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
         </div>
 
-        {/* Certification Grid for Desktop */}
-        <div className={`mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-1000 delay-400 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-        }`}>
-          {certifications.map((cert, index) => (
-            <div
-              key={cert.id}
-              className={`cert-mini-card bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-center cursor-pointer ${
-                index === currentIndex ? 'ring-2 ring-accent' : ''
-              }`}
-              onClick={() => goToSlide(index)}
-            >
-              <img
-                src={cert.image}
-                alt={cert.title}
-                className="w-16 h-16 mx-auto mb-3 rounded object-cover"
-              />
-              <h4 className="font-semibold text-sm text-gray-800 dark:text-white mb-1">
-                {cert.title}
-              </h4>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                {cert.organization}
-              </p>
+        {/* Certification Row (Horizontal Scroll) */}
+        <div
+          className={`mt-16 transition-all duration-1000 delay-400 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          }`}
+        >
+          <div className="w-full overflow-x-auto overflow-y-hidden no-scrollbar py-3 md:py-4">
+            <div className="flex flex-nowrap gap-6">
+              {certifications.map((cert, index) => (
+                <div
+                  key={cert.id}
+                  className={`cert-mini-card relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:z-10 text-center cursor-pointer shrink-0 w-56 md:w-60 ${
+                    index === currentIndex ? 'ring-2 ring-accent' : ''
+                  }`}
+                  onClick={() => goToSlide(index)}
+                >
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-16 h-16 mx-auto mb-3 rounded object-cover"
+                  />
+                  <h4 className="font-semibold text-sm text-gray-800 dark:text-white mb-1">
+                    {cert.title}
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    {cert.organization}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

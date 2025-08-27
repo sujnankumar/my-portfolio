@@ -327,3 +327,12 @@ img:not([src]) {
     display: none !important;
   }
 }
+
+/* Utility: hide scrollbar (cross-browser) */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

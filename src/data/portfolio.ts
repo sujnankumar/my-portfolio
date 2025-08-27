@@ -78,66 +78,138 @@ export const projects: Project[] = [
 export const certifications: Certification[] = [
   {
     id: 1,
-    title: "AWS Certified Solutions Architect",
-    organization: "Amazon Web Services",
-    date: "2024",
-    image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=300",
-    viewUrl: "https://aws.amazon.com/certification/"
+    title: "Google AI Essentials",
+    organization: "Google",
+    date: "2025",
+    image: "https://images.pexels.com/photos/1181290/pexels-photo-1181290.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/google-ai-essentials"
   },
   {
     id: 2,
-    title: "Google Cloud Professional Developer",
-    organization: "Google Cloud",
-    date: "2023",
-    image: "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=300",
-    viewUrl: "https://cloud.google.com/certification"
+    title: "Certificate of Participation in Treasure Hunt: January Series",
+    organization: "Unstop",
+    date: "2025",
+    image: "https://images.pexels.com/photos/1181300/pexels-photo-1181300.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://unstop.com/certificates"
   },
   {
     id: 3,
-    title: "React Professional Certificate",
-    organization: "Meta",
-    date: "2023",
-    image: "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=300",
-    viewUrl: "https://developers.facebook.com/certification/"
+    title: "Assets, Threats, and Vulnerabilities",
+    organization: "Google",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181310/pexels-photo-1181310.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/assets-threats-and-vulnerabilities"
   },
   {
     id: 4,
-    title: "Kubernetes Administrator",
-    organization: "Cloud Native Computing Foundation",
+    title: "Automate Cybersecurity Tasks with Python",
+    organization: "Google",
     date: "2024",
-    image: "https://images.pexels.com/photos/1181280/pexels-photo-1181280.jpeg?auto=compress&cs=tinysrgb&w=300",
-    viewUrl: "https://www.cncf.io/certification/"
+    image: "https://images.pexels.com/photos/1181320/pexels-photo-1181320.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/automate-cybersecurity-tasks-with-python"
+  },
+  {
+    id: 5,
+    title: "Connect and Protect: Networks and Network Security",
+    organization: "Google",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181330/pexels-photo-1181330.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/networks-and-network-security"
+  },
+  {
+    id: 6,
+    title: "Google Cybersecurity Certificate",
+    organization: "Coursera",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181340/pexels-photo-1181340.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/professional-certificates/google-cybersecurity"
+  },
+  {
+    id: 7,
+    title: "Google Cybersecurity Specialization",
+    organization: "Google",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181350/pexels-photo-1181350.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/specializations/google-cybersecurity"
+  },
+  {
+    id: 8,
+    title: "Put It to Work: Prepare for Cybersecurity Jobs",
+    organization: "Google",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181360/pexels-photo-1181360.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/prepare-for-cybersecurity-jobs"
+  },
+  {
+    id: 9,
+    title: "Sound the Alarm: Detection and Response",
+    organization: "Google",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181370/pexels-photo-1181370.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/detection-and-response"
+  },
+  {
+    id: 10,
+    title: "Tools of the Trade: Linux and SQL",
+    organization: "Google",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181380/pexels-photo-1181380.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/linux-and-sql"
+  },
+  {
+    id: 11,
+    title: "Play It Safe: Manage Security Risks",
+    organization: "Google",
+    date: "2024",
+    image: "https://images.pexels.com/photos/1181390/pexels-photo-1181390.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/manage-security-risks"
+  },
+  {
+    id: 12,
+    title: "Foundations of Cybersecurity",
+    organization: "Google",
+    date: "2023",
+    image: "https://images.pexels.com/photos/1181400/pexels-photo-1181400.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/foundations-of-cybersecurity"
+  },
+  {
+    id: 13,
+    title: "Programming for Everybody (Getting Started with Python)",
+    organization: "University of Michigan",
+    date: "2023",
+    image: "https://images.pexels.com/photos/1181410/pexels-photo-1181410.jpeg?auto=compress&cs=tinysrgb&w=300",
+    viewUrl: "https://www.coursera.org/learn/python"
   }
 ];
 
 export const experience: Experience[] = [
   {
     id: 1,
-    title: "Senior Full Stack Developer",
-    company: "TechCorp Solutions",
+    title: "Computer Science & Engineering Degree",
+    company: "Mangalore Institute of Technology and Engineering",
     period: "2022 - Present",
-    description: "Led development of enterprise-level web applications using React, Node.js, and cloud technologies. Managed a team of 5 developers."
+    description: "Pursuing a Bachelor of Engineering in Computer Science, specializing in software engineering, web development, and cybersecurity."
   },
   {
     id: 2,
-    title: "Full Stack Developer",
-    company: "StartupXYZ",
-    period: "2020 - 2022",
-    description: "Built scalable web applications from concept to deployment. Implemented CI/CD pipelines and improved system performance by 40%."
+    title: "Tech Lead",
+    company: "Crypton Club, MITE",
+    period: "2023 - Present",
+    description: "Leading a student-run club focused on cybersecurity education. Organizing workshops, ethical hacking events, and Capture The Flag (CTF) competitions to enhance practical cybersecurity skills."
   },
   {
     id: 3,
-    title: "Frontend Developer",
-    company: "Digital Agency Pro",
-    period: "2019 - 2020",
-    description: "Developed responsive websites and web applications for clients. Specialized in React.js and modern CSS frameworks."
+    title: "Finalist, Smart India Hackathon",
+    company: "Smart India Hackathon",
+    period: "2024",
+    description: "Developed an innovative OEM web scraper utilizing AI-powered crawlers. Reached the finalist stage in a highly competitive national hackathon, demonstrating strong problem-solving and technical skills."
   },
   {
     id: 4,
-    title: "Computer Science Degree",
-    company: "University of Technology",
-    period: "2015 - 2019",
-    description: "Bachelor of Science in Computer Science with focus on software engineering and web development."
+    title: "Winner, National and International CTF and Hackathons",
+    company: "Various Hackathons/Competitions",
+    period: "2022 - 2025",
+    description: "Secured victories in multiple national and international Capture The Flag (CTF) competitions and hackathons, showcasing expertise in ethical hacking, cybersecurity, and problem-solving under pressure."
   }
 ];
 
