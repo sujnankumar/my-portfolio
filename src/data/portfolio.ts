@@ -23,7 +23,7 @@ export const projects: Project[] = [
     id: 3,
     title: "NL2SQL-AI-Assistant",
     description: "Natural language to SQL assistant.",
-    image: "https://brokenctrl.com/wp-content/uploads/NLSQL-AI.jpg",
+    image: "/nl2sql.png",
     techStack: ["Python"],
     demoUrl: "",
     githubUrl: "https://github.com/sujnankumar/NL2SQL-AI-Assistant"
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     id: 4,
     title: "AI Surveillance App",
     description: "AI Surveillance System.",
-    image: "https://www.securitysales.com/wp-content/uploads/2019/05/May-AI-Security-Robotics.jpg",
+    image: "/ai-surveillance.png",
     techStack: ["Python"],
     demoUrl: "",
     githubUrl: "https://github.com/sujnankumar/ai_surveillance_app"
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     id: 5,
     title: "Restobot - Restaurant Chatbot",
     description: "AI-powered restaurant assistant with menu exploration, personalized dish recommendations, cart, and dashboard. Flask backend with React/Tailwind frontend.",
-    image: "https://blog.slantco.com/wp-content/uploads/2023/08/ai-in-restaurants-1024x682.jpeg",
+    image: "/restobot.png",
     techStack: ["Flask", "Flask-SQLAlchemy", "React", "Tailwind CSS"],
     demoUrl: "",
     githubUrl: "https://github.com/sujnankumar/restobot-restaurant-chatbot"
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     id: 6,
     title: "OEM Webscrape Server",
     description: "Web scraping server for OEM data aggregation.",
-    image: "https://vico.com.hk/be/uploads/blogs/what%20is%20OEM_bBxHHMWsL.jpg",
+    image: "/oem-web-scrape.png",
     techStack: ["Python"],
     demoUrl: "",
     githubUrl: "https://github.com/sujnankumar/oem_webscrape_server"
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     id: 7,
     title: "StockOpt - Portfolio Optimization",
     description: "Flask web app for dynamic portfolio generation and optimization (Markowitz, Black-Litterman) with interactive stock cards and visualizations.",
-    image: "https://raw.githubusercontent.com/sujnankumar/StockOpt/main/screenshots/home.png",
+    image: "/stock-opt.png",
     techStack: ["Python", "Flask"],
     demoUrl: "",
     githubUrl: "https://github.com/sujnankumar/StockOpt"
